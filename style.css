@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
 .gray-text {
     color: lightgray;
 }
@@ -105,4 +109,57 @@ header, #header-top {
 
 #header-menu ul li:first-child a {
     padding-left: 0;
+}
+
+#banners {
+    display: flex;
+    flex-wrap: wrap;
+}
+/* ">" pravilo budet nasledovatsa divami pervogo urovna vlojenosti*/
+#banners > div {
+    width: 50%;
+}
+
+#banners > div img {
+    width: 100%;
+}
+
+#banners .bn-left .wrap {
+    margin-right: 15px;
+    border: 1px solid gray;
+}
+
+#banners .bn-right .wrap {
+    margin-left: 15px;
+}
+
+#banners .bn-right .wrap .img-block {
+    position: relative;
+}
+
+#banners .bn-right h3 {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-size: 2vw;
+    color: white;
+    font-weight: normal;
+    margin: 0;
+}
+
+#banners .bn-right p {
+    border-top: 1px solid black;
+    margin-top: 5px;
+    padding-top: 15px;
+}
+
+#banners i {
+    color: #f2ac04;
+    font-size: 26px;
+}
+#banners .slide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px;
 }
