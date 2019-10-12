@@ -57,7 +57,7 @@ header, #header-top {
     }
 
 
-#logo {
+#logo, #logo-footer {
     position: relative;
     width: 245px;
     display: flex;
@@ -70,7 +70,7 @@ header, #header-top {
 
 }
 
-#logo::after, #logo::before {
+#logo::after, #logo::before, #logo-footer::after, #logo-footer::before {
     content: "";
     height: 55px;
     width: 55px;
@@ -79,13 +79,13 @@ header, #header-top {
     top: 0px;
 }
 
-#logo::after {
+#logo::after,#logo-footer::after {
         background: #f2ac04;
         position: absolute;
         left: 15px;
           }
 
-#logo::before {
+#logo::before, #logo-footer::before {
         background: #f8d277;
         position: absolute;
         left: 0;
@@ -253,4 +253,45 @@ content .item h2 {
 .contacts > :first-of-type span,  .contacts >:first-of-type + div span {
     font-weight: bold;
     font-size: 18px;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid grey;
+    padding: 25px 0 15px 0;
+    margin-top: 25px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#logo-footer {
+    padding: 0;
+    width: 190px;
+    border: none;
+    height: 60px;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px 0 10px 0;
+}
+
+footer ul li a {
+    color: grey;
+    padding: 0 10px;
+    display: block;
+    border-right: 1px solid grey;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+footer ul li:last-child a {
+    border: none;
+}
+footer span {
+    color: grey;
 }
